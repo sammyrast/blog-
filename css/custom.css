@@ -65,3 +65,9 @@ iframe {
     border: none;
     overflow: hidden;
 }
+
+/* Hide the default MkDocs logo (open book icon) */
+.md-header__title img,  /* For logo image */
+.md-header__title svg { /* For SVG logo */
+    display: none;
+}
