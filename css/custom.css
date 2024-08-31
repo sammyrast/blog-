@@ -1,0 +1,67 @@
+/* Style for images with align=right */
+img[align=right] {
+    float: right;
+    margin-left: 20px;
+    border-radius: 50%;
+    width: 150px;
+}
+
+/* Hide the Home button (brand) */
+.md-header__brand {
+    display: none;
+}
+
+/* Set the background color for the main content area */
+/* .md-main {
+    background-color: #F8FAFC;
+} */
+
+/* Ensure the main content area has a contrasting background */
+/* .md-content {
+    background-color: #F8FAFC;
+    font-family: Roboto;
+} */
+
+.md-sidebar {
+    display: none;
+}
+/* Set text color to #BEC1C6 */
+.md-content, .md-header, a{
+    color: black; /* Set text color */
+}
+
+/* Optional: Ensure links have a specific color */
+/* a {
+    color: #1E2129; /* Set link color to #BEC1C6 */
+    
+.md-sidebar .md-nav__item.md-nav__item--home {
+    display: none;
+}
+body {
+    font-family: 'inter', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.md-header-nav__title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: purple;
+}
+
+.md-header__title svg {
+    display: none;
+}
+
+/* OR, if the icon is in a specific class */
+.md-icon {
+    display: none;
+}
+
+/* Style for Mailchimp iframe */
+iframe {
+    max-width: 100%;
+    border: none;
+    overflow: hidden;
+}

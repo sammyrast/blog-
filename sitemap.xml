@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://sammyrast.github.io/blog-/</loc>
+         <lastmod>2024-08-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://sammyrast.github.io/blog-/contact/</loc>
+         <lastmod>2024-08-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://sammyrast.github.io/blog-/privacy/</loc>
+         <lastmod>2024-08-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://sammyrast.github.io/blog-/posts/migrate-blog-to-new-platform/</loc>
+         <lastmod>2024-08-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://sammyrast.github.io/blog-/posts/summer-time/</loc>
+         <lastmod>2024-08-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://sammyrast.github.io/blog-/posts/top-books/</loc>
+         <lastmod>2024-08-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+</urlset>

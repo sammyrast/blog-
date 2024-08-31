@@ -1,0 +1,667 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://sammyrast.github.io/blog-/posts/migrate-blog-to-new-platform/">
+      
+      
+        <link rel="prev" href="../../privacy/">
+      
+      
+        <link rel="next" href="../summer-time/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.2.7">
+    
+    
+      
+        <title>Why I migrated my blog to new platform? - Sammy's boring personal blog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.046329b4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.85d0ee34.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="white">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#migrating-my-blog-to-a-new-platform-from-django-on-digital-ocean-to-github-pages-with-mkdocs" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Sammy&#39;s boring personal blog" class="md-header__button md-logo" aria-label="Sammy's boring personal blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Sammy's boring personal blog
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Why I migrated my blog to new platform?
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../privacy/" class="md-tabs__link">
+        
+  
+    
+  
+  Privacy Policy
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  Posts
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../contact/" class="md-tabs__link">
+        
+  
+    
+  
+  Contact
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Sammy&#39;s boring personal blog" class="md-nav__button md-logo" aria-label="Sammy's boring personal blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Sammy's boring personal blog
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../privacy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Privacy Policy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Posts
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Posts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Why I migrated my blog to new platform?
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Why I migrated my blog to new platform?
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-the-migration" class="md-nav__link">
+    Why the Migration?
+  </a>
+  
+    <nav class="md-nav" aria-label="Why the Migration?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cost-efficiency" class="md-nav__link">
+    Cost Efficiency 🤑
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simplicity-and-maintenance" class="md-nav__link">
+    Simplicity and Maintenance 🧘
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flexibility-and-speed" class="md-nav__link">
+    Flexibility and Speed ⏩
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-migration-process" class="md-nav__link">
+    The Migration Process 🚀
+  </a>
+  
+    <nav class="md-nav" aria-label="The Migration Process 🚀">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-setting-up-mkdocs" class="md-nav__link">
+    Step 1: Setting Up MkDocs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-creating-the-blog-structure" class="md-nav__link">
+    Step 2: Creating the Blog Structure 🏗️
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-migrating-content" class="md-nav__link">
+    Step 3: Migrating Content 🕊️
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-deploying-to-github-pages" class="md-nav__link">
+    Step 4: Deploying to GitHub Pages 🧑‍🚀
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-results" class="md-nav__link">
+    The Results 📈
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    Conclusion ✏️
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../summer-time/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How was my summer?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../top-books/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Top 5 Books That Changed My Life
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="migrating-my-blog-to-a-new-platform-from-django-on-digital-ocean-to-github-pages-with-mkdocs">Migrating My Blog to a New Platform: From Django on Digital Ocean to GitHub Pages with MkDocs 🚀<a class="headerlink" href="#migrating-my-blog-to-a-new-platform-from-django-on-digital-ocean-to-github-pages-with-mkdocs" title="Permanent link">&para;</a></h1>
+<p>As a developer and indie hacker, I’m always on the lookout for ways to optimize both my workflow and my expenses. Running my blog on Digital Ocean with Django was a great learning experience, but as my needs evolved, I realized that it wasn’t the most cost-effective or flexible solution for what I wanted in the long term.
+👨‍💻</p>
+<p>So, I decided to migrate my blog to a new platform—one that would reduce costs, simplify maintenance, and give me more flexibility in managing content. After some research, I found that hosting a static site using GitHub Pages and MkDocs, specifically with the Material for MkDocs theme, was the perfect fit. Here’s how and why I made the switch.</p>
+<h2 id="why-the-migration">Why the Migration?<a class="headerlink" href="#why-the-migration" title="Permanent link">&para;</a></h2>
+<h3 id="cost-efficiency">Cost Efficiency 🤑<a class="headerlink" href="#cost-efficiency" title="Permanent link">&para;</a></h3>
+<p>Running a Django application on Digital Ocean, while robust, wasn’t the most cost-effective solution for a simple blog. The VPS (Virtual Private Server) cost, along with the need to manage the server, database, and Django updates, added up. For a personal blog that didn’t require complex backend functionality, this setup was overkill.</p>
+<h3 id="simplicity-and-maintenance">Simplicity and Maintenance 🧘<a class="headerlink" href="#simplicity-and-maintenance" title="Permanent link">&para;</a></h3>
+<p>Maintaining a Django application means dealing with dependencies, security updates, and potential downtime during deployments. While this is manageable, it’s not ideal for a blog where I want to focus more on content creation and less on technical overhead.</p>
+<h3 id="flexibility-and-speed">Flexibility and Speed ⏩<a class="headerlink" href="#flexibility-and-speed" title="Permanent link">&para;</a></h3>
+<p>GitHub Pages offers a seamless way to deploy static sites directly from a GitHub repository. By using MkDocs, I could leverage Markdown for writing posts, making the process much more streamlined. The Material for MkDocs theme provided a professional look with minimal configuration, and being a static site, the blog now loads faster and is easier to manage.</p>
+<h2 id="the-migration-process">The Migration Process 🚀<a class="headerlink" href="#the-migration-process" title="Permanent link">&para;</a></h2>
+<h3 id="step-1-setting-up-mkdocs">Step 1: Setting Up MkDocs<a class="headerlink" href="#step-1-setting-up-mkdocs" title="Permanent link">&para;</a></h3>
+<p>First, I installed MkDocs and the Material for MkDocs theme. This setup is simple, requiring just a few commands:</p>
+<div class="codehilite"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>mkdocs
+pip<span class="w"> </span>install<span class="w"> </span>mkdocs-material
+</code></pre></div>
+
+<p>With MkDocs, my content is written in Markdown, which is a lightweight and easy-to-use format. This change alone simplified my workflow significantly.</p>
+<h3 id="step-2-creating-the-blog-structure">Step 2: Creating the Blog Structure 🏗️<a class="headerlink" href="#step-2-creating-the-blog-structure" title="Permanent link">&para;</a></h3>
+<p>I structured the blog using folders for posts and images, and I customized the layout by tweaking the <code>mkdocs.yml</code> configuration file. The new structure made it easy to manage content and keep everything organized.</p>
+<h3 id="step-3-migrating-content">Step 3: Migrating Content 🕊️<a class="headerlink" href="#step-3-migrating-content" title="Permanent link">&para;</a></h3>
+<p>Migrating the content from Django to MkDocs was straightforward. I converted my existing blog posts to Markdown format and placed them in the appropriate directories within the new MkDocs project. For images and other static files, I simply moved them to the <code>docs</code> folder.</p>
+<h3 id="step-4-deploying-to-github-pages">Step 4: Deploying to GitHub Pages 🧑‍🚀<a class="headerlink" href="#step-4-deploying-to-github-pages" title="Permanent link">&para;</a></h3>
+<p>Deploying the blog to GitHub Pages was the most satisfying part of the process. After setting up my MkDocs configuration, I used the command:</p>
+<div class="codehilite"><pre><span></span><code>mkdocs<span class="w"> </span>gh-deploy
+</code></pre></div>
+
+<p>This command builds the site and pushes it to the <code>gh-pages</code> branch of my GitHub repository. The site is then automatically hosted on GitHub Pages, with no additional cost and minimal maintenance.</p>
+<h2 id="the-results">The Results 📈<a class="headerlink" href="#the-results" title="Permanent link">&para;</a></h2>
+<p>The migration has resulted in a blog that is faster, easier to manage, and significantly cheaper to maintain. The GitHub Pages and MkDocs setup provides all the flexibility I need, with the added benefit of being version-controlled, thanks to GitHub.</p>
+<p>I now spend less time worrying about server maintenance and more time focusing on writing and sharing my thoughts. Plus, the static nature of the site has improved loading times, providing a better experience for my readers.</p>
+<h2 id="conclusion">Conclusion ✏️<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
+<p>Migrating my blog from Django on Digital Ocean to GitHub Pages with MkDocs was one of the best decisions I’ve made for this project. It’s a great example of finding the right tool for the job—sometimes, simpler is better. If you’re running a blog or any content-focused site and want a cost-effective, low-maintenance solution, I highly recommend considering GitHub Pages and MkDocs.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.sections", "navigation.tabs", "toc.integrate", "content.code.annotate", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      
+        <script src="../../js/custom.js"></script>
+      
+    
+  </body>
+</html>
